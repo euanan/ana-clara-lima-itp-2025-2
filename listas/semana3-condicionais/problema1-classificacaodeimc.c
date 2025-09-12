@@ -1,9 +1,10 @@
 #include <stdio.h>
-#include <locale.h>
+#include <windows.h> // Para SetConsoleOutputCP()
 
 int main() {
-    // Configurando a localização para português
-    setlocale(LC_ALL, "Portuguese");
+    //Configurando o console para UFT-8 (Windows)
+    SetConsoleOutputCP(65001);
+    SetConsoleCP(65001);
     
     float peso, altura, imc;
     
@@ -33,7 +34,6 @@ int main() {
     else if (30.0 <= imc) {
         printf("Você possui obesidade.\n");
     }
-
 
     return 0;
 }

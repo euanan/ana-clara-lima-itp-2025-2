@@ -1,10 +1,7 @@
 #include <stdio.h>
-#include <locale.h>
 
 int main() {
-    // Configurando a localização para português
-    setlocale(LC_ALL, "Portuguese");
-    
+    //Definindo os tipos das variáveis
     float peso, altura, imc;
     
     //Solicitar o peso
