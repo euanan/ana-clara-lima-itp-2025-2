@@ -18,31 +18,41 @@ int main() {
     scanf(" %1s", &jogada2);
 
     //Condições para o jogador vencer
-    //Condições para o jogador 1 vencer
-    if (strcmp(jogada1, pedra) == 0 && strcmp(jogada2, tesoura) == 0) {
-        printf("O jogador 1 vence.\n");
-    }
-    else if (strcmp(jogada1, tesoura) == 0 && strcmp(jogada2, papel) == 0) {
-        printf("O jogador 1 vence.\n");
-    }
-    else if (strcmp(jogada1, papel) == 0 && strcmp(jogada2, pedra) == 0) {
-        printf("O jogador 1 vence.");
+    //Validação das jogadas
+    if ((strcmp(jogada1, pedra) != 0 && strcmp(jogada1, papel) != 0 && strcmp(jogada1, tesoura) != 0) ||
+        (strcmp(jogada2, pedra) != 0 && strcmp(jogada2, papel) != 0 && strcmp(jogada2, tesoura) != 0)) {
+        printf("Jogada inválida!\n");
+        return 0;
     }
 
-    //Condições para o jogador 2 vencer
-    else if (strcmp(jogada2, pedra) == 0 && strcmp(jogada1, tesoura) == 0) {
-        printf("O jogador 2 vence.\n");
-    }
-    else if (strcmp(jogada2, tesoura) == 0 && strcmp(jogada1, papel) == 0) {
-        printf("O jogador 2 vence.");
-    }
-    else if (strcmp(jogada2, papel) == 0 && strcmp(jogada1, pedra) == 0) {
-        printf("O jogador 2 vence.");
-    }
-    //Caso de empate
-    else if (strcmp(jogada1, jogada2) == 0) {
-        printf("Houve empate.");
+    else {
+        //Condições para o jogador 1 vencer
+        if (strcmp(jogada1, pedra) == 0 && strcmp(jogada2, tesoura) == 0) {
+            printf("O jogador 1 vence.\n");
+        }
+        else if (strcmp(jogada1, tesoura) == 0 && strcmp(jogada2, papel) == 0) {
+            printf("O jogador 1 vence.\n");
+        }
+        else if (strcmp(jogada1, papel) == 0 && strcmp(jogada2, pedra) == 0) {
+            printf("O jogador 1 vence.");
+        }
+
+        //Condições para o jogador 2 vencer
+        else if (strcmp(jogada2, pedra) == 0 && strcmp(jogada1, tesoura) == 0) {
+            printf("O jogador 2 vence.\n");
+        }
+        else if (strcmp(jogada2, tesoura) == 0 && strcmp(jogada1, papel) == 0) {
+            printf("O jogador 2 vence.");
+        }
+        else if (strcmp(jogada2, papel) == 0 && strcmp(jogada1, pedra) == 0) {
+            printf("O jogador 2 vence.");
+        }
+        //Caso de empate
+        else if (strcmp(jogada1, jogada2) == 0) {
+            printf("Houve empate.");
+        }
     }
     
     return 0;
+
 }
