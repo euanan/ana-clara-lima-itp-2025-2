@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+//Verifica se a resposta está correta:
 bool resposta_correta(int gabarito, int resposta) {
     if (gabarito == resposta) return true;
     if (gabarito != resposta) return false;
 }
 
+//Contando a quantidade de acertos:
 int correcao_provas(int num_respostas, int gabarito_questoes[], int respostas_alunos[]) {
     int contagem_respostas_corretas = 0;
 
@@ -46,6 +48,7 @@ int main() {
 
     acertos = correcao_provas(num_questoes, gabarito_questoes,respostas_alunos);
     
+    //Imprimindo o total de acertos do aluno:
     printf("O aluno obteve %d acertos.\n", acertos);
     
      if (acertos == 1) {
