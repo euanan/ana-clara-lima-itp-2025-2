@@ -1,5 +1,11 @@
 #include <stdio.h> //Para utilizar printf e scanf
 
+//Vetores para histórico
+double historico_valores[10];       //Vetor para valores de entrada
+double historico_resultados[10];    //Vetor para resultados
+char historico_tipos[10][50];       //Vetor de strings para tipos
+int total_conversoes = 0;           //Contador
+
 //Funções
 void convertercomprimento();
 void convertertemperatura();
@@ -7,14 +13,23 @@ void convertertemperatura();
 int main() {
     int opcao; //Variável utilizada para armazenar a escolha do usuário
 
+    //Vetor de strings para menu
+    char *menu_opcoes[] = {
+        "Converter Comprimento",
+        "Converter Temperatura",
+        "Ver Historico",
+        "Sair"
+    };
+
     printf("CONVERSOR DE UNIDADE DE MEDIDAS");
 
     do {
-        //Mostra as opções do menu:
-        printf("\n1. Converter Comprimento\n");
-        printf("2. Converter Temperatura\n");
-        printf("3. Sair\n");
-        printf("Escolha uma opcao: ");
+        printf("\nMenu Principal\n");
+
+        //Repetição: Mostra menu usando vetor
+        for(int i = 0; i < 4; i++) {
+            printf("%d. %s\n", i + 1, menu_opcoes[i]);
+        }
         //Lê a escolha do usuário:
         scanf("%d", &opcao);
 
@@ -30,6 +45,9 @@ int main() {
                 convertertemperatura(); //Chama a função para converter temperatura
                 break;
             case 3:
+                mostrar_historico();
+                break;
+            case 4:
                 printf("Saindo...\n");
                 break;
             default: //Se nenhum dos cases anteriores for executado, ele será
@@ -47,7 +65,24 @@ int main() {
     return 0; //Indica que o programa terminou com sucesso
 }
 
-//Implementação da função
+void mostrar_historico() {
+    printf("\nHISTORICO (%d conversoes)\n", total_conversoes);
+    
+    if(total_conversoes == 0) {
+        printf("Nenhuma conversao realizada.\n");
+        return;
+    }
+    
+    //Repetição: Percorre vetor do histórico
+    for(int i = 0; i < total_conversoes; i++) {
+        printf("%d. %s | Entrada: %.2f | Saida: %.2f\n", 
+               i + 1, 
+               historico_tipos[i], 
+               historico_valores[i], 
+               historico_resultados[i]);
+    }
+}
+
 void convertercomprimento() {
     int escolha;
     double valor, resultado;//Variáveis para números decimais
@@ -64,9 +99,23 @@ void convertercomprimento() {
     if (escolha == 1) {
         resultado = valor * 100;
         printf("%.2f metros = %.2f centimetros\n", valor, resultado);
+
+        //Adiciona ao vetor de histórico
+        historico_valores[total_conversoes] = valor;
+        historico_resultados[total_conversoes] = resultado;
+        strcpy(historico_tipos[total_conversoes], "m -> cm");
+        total_conversoes++;
+
     } else if (escolha == 2) {
         resultado = valor / 100;
         printf("%.2f centimetros = %.2f metros\n", valor, resultado);
+
+        //Adiciona ao vetor de histórico
+        historico_valores[total_conversoes] = valor;
+        historico_resultados[total_conversoes] = resultado;
+        strcpy(historico_tipos[total_conversoes], "cm -> m");
+        total_conversoes++;
+
     } else {
         printf("Opcao invalida.\n");
     }
@@ -88,9 +137,23 @@ void convertertemperatura() {
     if (escolha == 1) {
         resultado = (valor * 9 / 5) + 32;
         printf("%.2f°C = %.2f°F\n", valor, resultado);
+
+        //Adiciona ao vetor de histórico
+        historico_valores[total_conversoes] = valor;
+        historico_resultados[total_conversoes] = resultado;
+        strcpy(historico_tipos[total_conversoes], "°C -> °F");
+        total_conversoes++;
+
     } else if (escolha == 2) {
         resultado = (valor - 32) * 5 / 9;
         printf("%.2f°F = %.2f°C\n", valor, resultado);
+
+        //Adiciona ao vetor de histórico
+        historico_valores[total_conversoes] = valor;
+        historico_resultados[total_conversoes] = resultado;
+        strcpy(historico_tipos[total_conversoes], "°F -> °C");
+        total_conversoes++;
+
     } else {
         printf("Opcao invalida.\n");
     }
