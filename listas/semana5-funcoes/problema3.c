@@ -23,7 +23,7 @@ bool sondasegura(float x, float y) {
         return false;
     }
 
-    //Pontos verdes
+    //Pontos verdes:
     float pontos[4][2] = {
         {x + 0.2, y + 0.2},  //superior direito
         {x - 0.2, y - 0.2},  //inferior esquerdo
@@ -31,7 +31,7 @@ bool sondasegura(float x, float y) {
         {x - 0.2, y + 0.2}   //superior esquerdo
     };
 
-    //Verificando cada ponto verde
+    //Verificando cada ponto verde:
     for (int i = 0; i < 4; i++) {
         if (!pontoseguro(pontos[i][0], pontos[i][1])) {
             return false;

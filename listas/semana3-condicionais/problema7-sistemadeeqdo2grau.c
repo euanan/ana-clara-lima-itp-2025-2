@@ -2,10 +2,10 @@
 #include <math.h>
 
 int main() {
-    //Definindo as variáveis dos coeficientes
+    //Definindo as variáveis dos coeficientes:
     float a, b, c, discriminante, raiz1, raiz2;
 
-    //Recebendo os coeficientes
+    //Recebendo os coeficientes:
     printf("Insira o coeficiente a:\n");
     scanf("%f", &a);
     printf("Insira o coeficiente b:\n");

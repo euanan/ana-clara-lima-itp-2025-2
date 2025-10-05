@@ -23,7 +23,7 @@ int main() {
     //Vetor para marcar quais figurinhas foram armazenadas:
     int possui[m + 1];
 
-    //Inicializa o vetor com 0 (não possui)
+    //Inicializa o vetor com 0 (não possui):
     for (int i = 1; i <= m; i++) {
         possui[i] = 0;
     }

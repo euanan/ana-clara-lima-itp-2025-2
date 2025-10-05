@@ -24,7 +24,7 @@ int main() {
         printf("Coordenada do alvo %d: y: \n", i); 
         scanf("%f", &yalvo);
 
-        //Calculando a distância entre a coordenada do homem aranha e o alvo
+        //Calculando a distância entre a coordenada do homem aranha e o alvo:
         distanciaalvohomem = sqrt(pow(x-xalvo, 2) + pow(yalvo - y, 2));
 
 
@@ -33,7 +33,7 @@ int main() {
             x = (2 * xalvo) - x;
         }
         else {
-            //Quantidade de alvos não acertados
+            //Quantidade de alvos não acertados:
             todos_alcancados = 0;
             break;
         }

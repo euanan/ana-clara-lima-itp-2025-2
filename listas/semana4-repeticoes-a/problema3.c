@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-//Declaração das funções
+//Declaração das funções:
 int calc_divisores_proprios(int numero);
 int processar_num_a(int a);
 int processar_num_b(int b);
@@ -12,21 +12,21 @@ int verificar_rel_b_para_a(int soma_b, int a);
 int main() {
     int a, b;
     
-    //Recebendo os números a e b
+    //Recebendo os números a e b:
     printf("Digite um número inteiro: ");
     scanf("%d", &a);
     printf("Digite outro número inteiro: ");
     scanf("%d", &b);
     
-    //Processamento individual de cada número
+    //Processamento individual de cada número:
     int resultado_a = processar_num_a(a);
     int resultado_b = processar_num_b(b);
     
-    //Verificação individual das relações
+    //Verificação individual das relações:
     int relacao_ab = verificar_rel_a_para_b(resultado_a, b);
     int relacao_ba = verificar_rel_b_para_a(resultado_b, a);
     
-    //Decisão final
+    //Decisão final:
     if (relacao_ab && relacao_ba) {
         printf("S\n");
     } else {
@@ -36,7 +36,7 @@ int main() {
     return 0;
 }
 
-//Calculando os divisores próprios
+//Calculando os divisores próprios:
 int calc_divisores_proprios(int numero) {
     if (numero <= 1) return 0;
     

@@ -3,10 +3,10 @@
 #include <ctype.h>
 
 int main() {
-    //Definindo as variáveis
+    //Definindo as variáveis:
     char febre, dordecabeca, dornocorpo, tosse;
 
-    //Sintomas
+    //Sintomas:
     printf("Tem febre? (S/N): ");
     scanf(" %c", &febre);
 
@@ -19,7 +19,7 @@ int main() {
     printf("Tem tosse? (S/N): ");
     scanf(" %c", &tosse);
 
-    //Diagnóstico com base nas respostas
+    //Diagnóstico com base nas respostas:
     if (febre == 'S' && dordecabeca == 'S' && dornocorpo == 'S')
     {
         printf("Possível gripe.\n");

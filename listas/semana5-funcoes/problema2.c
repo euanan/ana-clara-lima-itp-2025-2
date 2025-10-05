@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <math.h>
 
+//Função que verifica se o n° é primo:
 bool eprimo(int n) {
     if (n <= 1) return false;
     if (n == 2) return true;
@@ -16,7 +17,7 @@ bool eprimo(int n) {
     return true;
 }
 
-
+//Trios primos:
 void triosprimos(){
 for (int i = 2; i < 49994; i++)
 {
@@ -30,6 +31,7 @@ for (int i = 2; i < 49994; i++)
 }
 }
 
+//Imprimindo os trios primos:
 int main() {
     printf("Trios de números primos:\n");
     triosprimos();

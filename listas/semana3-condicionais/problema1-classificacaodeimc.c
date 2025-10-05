@@ -1,25 +1,21 @@
 #include <stdio.h>
-#include <windows.h> // Para SetConsoleOutputCP()
 
 int main() {
-    //Configurando o console para UFT-8 (Windows)
-    SetConsoleOutputCP(65001);
-    SetConsoleCP(65001);
-    
+    //Definindo as variáveis:
     float peso, altura, imc;
     
-    //Solicitar o peso
+    //Solicitando o peso:
     printf("Digite o seu peso, em kg: ");
     scanf("%f", &peso);
     
-    //Solicitar a altura
+    //Solicitando a altura:
     printf("Digite a sua altura, em metros: ");
     scanf("%f", &altura);
     
-    // Calcular o IMC
+    //Calculando o IMC:
     imc = peso / (altura * altura);
     
-    // Exibir o resultado
+    //Exibe o resultado:
     printf("Seu IMC é: %.2f\n", imc);
 
     if (imc < 18.5) {

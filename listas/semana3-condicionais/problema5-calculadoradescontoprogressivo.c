@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    //Definindo as variáveis
+    //Definindo as variáveis:
     float valordacompra, valordesconto, valorfinal, porcentagemdesconto;
 
-    //Recebendo o valor da compra do usuário
+    //Recebendo o valor da compra do usuário:
     printf("Insira o valor da compra, em Reais:\n");
     scanf("%f", &valordacompra);
 
-    //Condições para os descontos
+    //Condições para os descontos:
     if (valordacompra <= 100) {
         valordesconto = 0;
         valorfinal = valordacompra;

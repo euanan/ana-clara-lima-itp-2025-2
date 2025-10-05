@@ -3,7 +3,7 @@
 
 #define N 4
 
-//Função para verificar se é seguro colocar rainha na posição
+//Função para verificar se é seguro colocar rainha na posição:
 bool seguro(int tabuleiro[N][N], int linha, int col) {
     int i, j;
     

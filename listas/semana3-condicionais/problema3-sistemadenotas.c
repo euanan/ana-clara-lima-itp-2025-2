@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    //Definindo as vaariáveis
+    //Definindo as variáveis:
     float nota1, nota2, nota3, mediaaritmetica, mediafinal, notafinal;
 
-    //Recebendo os dados do usuário
+    //Recebendo os dados do usuário:
     printf("Digite a primeira nota: ");
     scanf("%f", &nota1);
     printf("Digite a segunda nota: ");
@@ -12,10 +12,10 @@ int main() {
     printf("Digite a terceira nota: ");
     scanf("%f", &nota3);
 
-    //Calculando a média aritmética das 3 notas fornecidas pelo usuário
+    //Calculando a média aritmética das 3 notas fornecidas pelo usuário:
      mediaaritmetica = (nota1 + nota2 + nota3) / 3;
 
-     //Impressão da situação do aluno, de acordo com a média aritmética
+     //Impressão da situação do aluno, de acordo com a média aritmética:
     if (mediaaritmetica >= 7.0) {
         printf("Você foi aprovado por média.\n");
      }

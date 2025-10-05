@@ -5,10 +5,10 @@ void formatos_horas(int horas[], int minutos[], int numero_rondas, int formato_h
         printf("Ronda %d: ", i + 1);
 
         if (formato_horarios == 0) {
-            //Formato 24h
+            //Formato 24h:
             printf("%02d:%02d\n", horas[i], minutos[i]);
             } else {
-            //Formato 12h
+            //Formato 12h:
             char *turno;
             int horas12;
             
@@ -31,7 +31,7 @@ void formatos_horas(int horas[], int minutos[], int numero_rondas, int formato_h
     }
 }
 
-//Função para ajustar os horários(minutos maiores do que 59 e horas maiores do que 23)
+//Função para ajustar os horários(minutos maiores do que 59 e horas maiores do que 23):
 void ajustarhorario(int *horas, int *minutos) {
     *horas += *minutos / 60;
     *minutos = *minutos % 60;
@@ -49,7 +49,7 @@ int numero_rondas, formato_horarios;
         return 1;
     }
 
-    //Declarando vetores com tamanho variável
+    //Declarando vetores com tamanho variável:
     int horas[numero_rondas];
     int minutos[numero_rondas];
 
@@ -67,7 +67,7 @@ int numero_rondas, formato_horarios;
         return 1;
     }
 
-    //Ajustar os horários, se necessário
+    //Ajustar os horários, se necessário:
     ajustarhorario(&horas[i], &minutos[i]);
 }
 
