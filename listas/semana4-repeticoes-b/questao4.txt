@@ -1,0 +1,9 @@
+QUESTÃO 4
+
+“
+2 3 4 5
+3 4 5 6  
+4 5 6 7
+5 6 7 8
+“
+O código imprime uma matriz n × n onde cada elemento é a soma do número da linha com o número de coluna (i+j), resultando em um padrão onde os valores aumentam diagonalmente.

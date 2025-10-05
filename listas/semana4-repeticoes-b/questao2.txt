@@ -1,0 +1,9 @@
+QUESTÃO 2
+
+Digite um valor para n: “4”
+“
+1 
+1 2 
+1 2 3 
+1 2 3 4 “
+O código imprime um padrão triangular de números onde cada linha contém a sequência de 1 até o número da linha atual.

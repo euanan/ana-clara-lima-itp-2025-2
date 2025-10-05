@@ -1,0 +1,8 @@
+QUESTÃO 1
+
+“0 1 2 3
+0 1 2 3
+0 1 2 3
+0 1 2 3
+0 1 2 3”
+O código imprime 5 linhas, cada uma contendo os números "0 1 2 3" seguidos de quebra de linha.
