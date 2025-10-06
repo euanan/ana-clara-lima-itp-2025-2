@@ -1,4 +1,5 @@
 #include <stdio.h> //Para utilizar printf e scanf
+#include <string.h>
 
 //Vetores para histórico
 double historico_valores[10];       //Vetor para valores de entrada
@@ -9,6 +10,25 @@ int total_conversoes = 0;           //Contador
 //Funções
 void convertercomprimento();
 void convertertemperatura();
+
+
+void mostrar_historico() {
+    printf("\nHISTORICO (%d conversoes)\n", total_conversoes);
+    
+    if(total_conversoes == 0) {
+        printf("Nenhuma conversao realizada.\n");
+        return;
+    }
+    
+    //Repetição: Percorre vetor do histórico
+    for(int i = 0; i < total_conversoes; i++) {
+        printf("%d. %s | Entrada: %.2f | Saida: %.2f\n", 
+               i + 1, 
+               historico_tipos[i], 
+               historico_valores[i], 
+               historico_resultados[i]);
+    }
+}
 
 int main() {
     int opcao; //Variável utilizada para armazenar a escolha do usuário
@@ -54,33 +74,15 @@ int main() {
                 printf("Opcao invalida!\n");
         }
 
-        if (opcao != 3) {
+        if (opcao != 4) {
         printf("\nPressione Enter para continuar.");
         getchar(); //Limpa o Enter do scanf anterior
         getchar(); //Espera o usuário pressionar Enter
         }
 
-    } while(opcao != 3); //Irá repetir o menu até o usuário escolher "sair"
+    } while(opcao != 4); //Irá repetir o menu até o usuário escolher "sair"
 
     return 0; //Indica que o programa terminou com sucesso
-}
-
-void mostrar_historico() {
-    printf("\nHISTORICO (%d conversoes)\n", total_conversoes);
-    
-    if(total_conversoes == 0) {
-        printf("Nenhuma conversao realizada.\n");
-        return;
-    }
-    
-    //Repetição: Percorre vetor do histórico
-    for(int i = 0; i < total_conversoes; i++) {
-        printf("%d. %s | Entrada: %.2f | Saida: %.2f\n", 
-               i + 1, 
-               historico_tipos[i], 
-               historico_valores[i], 
-               historico_resultados[i]);
-    }
 }
 
 void convertercomprimento() {

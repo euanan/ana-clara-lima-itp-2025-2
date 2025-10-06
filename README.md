@@ -12,12 +12,13 @@
 **Repositório**: https://github.com/euanan/ana-clara-lima-itp-2025-2/tree/main/projeto
 **Vídeo de Demonstração**: [Link para o vídeo]
 ### Funcionalidades Implementadas:
-- [Lista das principais funcionalidades]
+- Converter Comprimento: Metros e Centímetros;
+- Converter Temperatura: Celsius e Fahrenheit.
 ### Conceitos da U1 Aplicados:
-- Estruturas condicionais: [onde foram usadas]
-- Estruturas de repetição: [onde foram usadas]
-- Vetores: [como foram aplicados]
-- Funções: [quantas e suas responsabilidades]
+- Estruturas condicionais: na linha 18, se o total de conversões for igual a zero, será exibido na tela que nenhuma conversão foi realizada; na linha 77, se a opção for diferente de 4, o programa retornará o menu principal; nas funções de conversões, de acordo com a opção escolhida, a conversão entre unidades será realizada.
+- Estruturas de repetição: na linha 23 percorre vetor do histórico; na linha 50 mostra o menu usando vetor; na linha 53 o switch-case executa diferentes ações baseada em condições, nesse caso são as opções escolhidas pelo usuário; na linha 83 irá repetir o menu até o usuário escolher "sair".
+- Vetores: usados para armazenar o histórico dos valores de entrada, resultados, os tipos e o menu de opções em string.
+- Funções: 3 funções além da main: a função convertercomprimento converte Metros para Centrímetros e Centpimetros para Metros; a função convertertemperatura converte Celsius para Fahrenheit e Fahrenheit para Celsius; a função mostrar_historico exibe o histórico.
 ## 📚 Listas de Exercícios
 ### Semana 2 - Variáveis, Tipos e Operadores:
 - ✅ Problema 1: Calculadora de IMC
@@ -51,8 +52,8 @@
 - ✅ Problema 3: A construção da ponte
 - ✅ Problema 4: Em busca do tesouro perdido
 ## 🎯 Principais Aprendizados
-[Reflita sobre os principais conceitos aprendidos na U1]
+Conhecimento da lógica de programação, em específico na linguagem C, pois eu não possuía conhecimento sobre a linguagem C anteriormente, entretanto, já possuía conhecimento sobre lógica de programação na linguagem Phyton.
 ## 🔧 Ambiente de Desenvolvimento
 - **SO**: Windows
-- **Compilador**: GCC versão [X.X]
+- **Compilador**: GCC versão 15.2.0
 - **Editor**: Visual Studio Code
