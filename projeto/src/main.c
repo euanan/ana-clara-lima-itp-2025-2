@@ -2,10 +2,10 @@
 #include <string.h>
 
 //Vetores para histórico
-double historico_valores[10];       //Vetor para valores de entrada
-double historico_resultados[10];    //Vetor para resultados
-char historico_tipos[10][50];       //Vetor de strings para tipos
-int total_conversoes = 0;           //Contador
+double historico_valores[10]; //Vetor para valores de entrada
+double historico_resultados[10]; //Vetor para resultados
+char historico_tipos[10][50]; //Vetor de strings para tipos
+int total_conversoes = 0; //Contador
 
 //Funções
 void convertercomprimento();
@@ -86,8 +86,8 @@ int main() {
 }
 
 void convertercomprimento() {
-    int escolha;
-    double valor, resultado;//Variáveis para números decimais
+    int escolha; //Variável que armazena a escolha de conversão do usuário
+    double valor, resultado; //Variáveis para números decimais, que armazenam o valor que o usuário deseja converter e o resultado da conversão
 
     printf("\n CONVERSOR DE COMPRIMENTO \n");
     printf("1. Metros para Centimetros\n");
