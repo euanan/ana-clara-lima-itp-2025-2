@@ -10,7 +10,7 @@
 ## 🚀 Projeto: Conversor de unidades
 **Descrição**: um conversor básico de unidades de medida
 **Repositório**: https://github.com/euanan/ana-clara-lima-itp-2025-2/tree/main/projeto
-**Vídeo de Demonstração**: [Link para o vídeo]
+**Vídeo de Demonstração**: https://youtu.be/P_qqO2K6wKg
 ### Funcionalidades Implementadas:
 - **Converter Comprimento:** Metros e Centímetros;
 - **Converter Temperatura:** Celsius e Fahrenheit.
