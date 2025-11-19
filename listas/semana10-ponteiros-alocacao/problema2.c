@@ -8,7 +8,7 @@ int main() {
     int * buscaNoVetor(int *v, int n, int valor, int *maior, int *qtd); //Protótipo
 
     printf("Digite a quantidade de números: \n");
-    scanf("%d", &n);
+    scanf("%d", &n); // Recebe a quantidade de números
 
     // Alocação dinâmica do vetor de entrada:
     int *v = (int *) malloc(n * sizeof(int));
@@ -27,11 +27,12 @@ int main() {
     }
 
     printf("Digite o número que você deseja saber a quantidade de ocorrências:\n");
-    scanf("%d", &valor);
+    scanf("%d", &valor); // Recebe o valor a ter as ocorrências registradas e contabilizadas
 
     int inutil;
-    int *resultado_indices = buscaNoVetor(v, n, valor, &inutil, &qtd);
+    int *resultado_indices = buscaNoVetor(v, n, valor, &inutil, &qtd); // Chama a função 
 
+    // Imprimindo as ocorrências:
     if (resultado_indices == NULL)
     {
         printf("Nenhuma ocorrencia.\n");
@@ -40,7 +41,7 @@ int main() {
         for (int i = 0; i < qtd; i++)
         {
             printf("%d ", resultado_indices[i]);
-        }
+        } // Imprime os índices de cada ocorrência
         printf("\n");
 
         free(resultado_indices); //Libera a memória alocada na função.
@@ -50,6 +51,7 @@ int main() {
     return 0;
 }
 
+// Função de buscar e contabilizar o número desejado pelo usuário:
 int * buscaNoVetor(int *v, int n, int valor, int *maior, int *qtd) {
     int cont = 0;
 
