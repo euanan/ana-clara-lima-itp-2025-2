@@ -5,20 +5,20 @@
 char *misturar(char *str1, char *str2); // Protótipo
 
 int main() {
-    char str1[100];
-    char str2[100];
+    char str1[100]; //Array que irá armazenar a string 1
+    char str2[100]; //Array que irá armazenar a string 2
 
     printf("Digite a primeira string:\n");
-    fgets(str1, 100, stdin);
+    fgets(str1, 100, stdin); //Recebe a primeira string
 
     printf("Digite a segunda string:\n");
-    fgets(str2, 100, stdin);
+    fgets(str2, 100, stdin); //Recebe a segunda string
 
     // Removendo o caractere de nova linha '\n' lido por fgets
     str1[strcspn(str1, "\n")] = 0;
     str2[strcspn(str2, "\n")] = 0;
 
-    char *str_misturada = misturar(str1, str2);
+    char *str_misturada = misturar(str1, str2); //Chama a função misturar
 
     if (str_misturada != NULL)
     {
@@ -27,7 +27,7 @@ int main() {
         str_misturada = NULL;
     } else {
         printf("Erro na alocção de memória.\n");
-    }
+    } //Imprime a nova string gerada
    
     return 0;
 }
