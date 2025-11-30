@@ -5,16 +5,12 @@
 #include <string.h>
 #include <ctype.h>
 
-//Definição da Chave de Substituição (Matriz):
-//A chave utilizada é simples: A -> Q, B ->W, etc.
-//Linha 0: Alfabeto Original;
-//Linha 1: Alfabeto cifrado (a chave)
 #define TAMANHO_ALFABETO 26
 #define MAX_INPUT_BUFFER 1024
 
 //Matriz de mapeamento(chave da cifra):
-// Linha 0: Original;
-//Linha 1; Cifrado.
+// Linha 0: Alfabeto Original;
+//Linha 1: Alfabeto Cifrado.
 char mapa_cifra[2][TAMANHO_ALFABETO] = {
     // Linha 0: Alfabeto Original
     {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'},
@@ -124,6 +120,7 @@ char* decifrar(const char *texto_cifrado) {
 
     // Loop externo: percorre cada caractere do texto cifrado
     for (size_t i = 0; i < tamanho; i++) {
+        // Conversão para maiúscula para facilitar:
         char letra = toupper(texto_cifrado[i]); 
         
         if (letra >= 'A' && letra <= 'Z') {
@@ -145,7 +142,9 @@ char* decifrar(const char *texto_cifrado) {
         }
     }
     
+    //Termina a string com '\0
     texto_original[tamanho] = '\0'; 
+    
     return texto_original;
 }
 
@@ -165,7 +164,7 @@ int main() {
     }
 
     printf("\nResultados:\n");
-    printf("Texto original: %s\n", texto_entrada);
+    printf("Texto original: %s\n", texto_entrada); // Imprime o texto de entrada
 
     //Cifragem
     texto_cifrado = cifrar(texto_entrada);
