@@ -57,3 +57,8 @@ Conhecimento da lógica de programação, em específico na linguagem C, pois eu
 - **SO**: Windows
 - **Compilador**: GCC versão 15.2.0
 - **Editor**: Visual Studio Code
+
+# Introdução a Técnicas de Programação - Unidade 2
+## 🚀 Projeto: Codificador/Decodificador simples de textos
+**Descrição**: um codificador simples de letras em textos
+**Vídeo de Demonstração**: https://youtu.be/ao6bxwBdGWU
